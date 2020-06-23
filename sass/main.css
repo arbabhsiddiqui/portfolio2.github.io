@@ -233,6 +233,26 @@ header {
   color: #f46036;
 }
 
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: #f46036;
+  color: #000;
+}
+
+.btn-dark {
+  background: black;
+}
+
+.btn-light {
+  background: #aca6d0;
+}
+
 main {
   padding: 4rem;
   height: 100%;
@@ -312,6 +332,60 @@ main#home h1 {
   grid-area: job-3;
 }
 
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+}
+
+.projects img {
+  width: 100%;
+  border: 3px #fff solid;
+}
+
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #f46036;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.boxes div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #f46036;
+  color: #000;
+}
+
+.boxes div:hover span {
+  color: #000;
+}
+
 #main-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,6 +405,20 @@ main#home h1 {
 
 #main-footer .icons > a:hover {
   color: #f46036;
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -376,11 +464,19 @@ main#home h1 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
+  }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */
