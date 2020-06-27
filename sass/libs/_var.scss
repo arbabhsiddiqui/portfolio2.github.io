@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300&family=Ovo&display=swap");
+
 $primary-color: #2e294e;
 $secondary-color: #f46036;
 $white: #fff;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../../img/background.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {

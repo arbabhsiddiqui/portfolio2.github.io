@@ -8,11 +8,11 @@
 body {
   @include background();
   background-color: $primary-color;
-
+  font-family: "Muli", sans-serif !important;
   height: 100%;
   margin: 0;
   color: set-text-color($primary-color);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   line-height: 1.5;
 }
 
@@ -26,6 +26,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 400;
+  font-family: "Ovo", serif;
 
   &.lg-heading {
     font-size: 6rem;
@@ -79,6 +80,7 @@ main {
   padding: 4rem;
   height: 100%;
   min-height: calc(100vh - 60px);
+  font-family: "Muli", sans-serif !important;
 
   .icons {
     margin-top: 1rem;
@@ -98,6 +100,8 @@ main {
     overflow: hidden;
     h1 {
       margin-top: 20vh;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
     }
   }
 }
